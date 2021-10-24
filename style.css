@@ -1,31 +1,213 @@
-* {
-    font-family: Helvetica;
-    background-color: #1E2127;
+/*
+ * You should write your CSS in this file.  Don't forget to add your name and
+ * @oregonstate.edu email address below.
+ *
+ * name: Ella Daugherty
+ * email: daugheel@oregonstate.edu
+ */
+
+/*=================== HEADER =================== remove body margin*/
+.header-image-container {
+    background: black;
+    position: absolute;
+    width: 1920px;
+    top: 0px;
+    left: -5px;
 }
 
-link {
-    color: #98C379;
-}
+.site-title a{
+    position: absolute;
+    left: 150px;
+    top: 40px;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-size: 200%;
+    text-decoration: none;
+    }
 
-h1 {
-    color: #D19A66;
+/*=================== FILTER BOX ===================*/
+
+.filter-container {
+    top: 165px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: #f2f2f2;
+    width: 220px;
+    font-family: Roboto;
+    border-radius: 2px;
 }
 
 h2 {
-    color: #61AFEF;
+    position: relative;
+    left: 10px;
 }
 
-h3 {
-    color: #61AFEF;
+.filter-input-container {
+    /*position: relative;*/
+    display: flex;
+    margin-bottom: 5px;
 }
 
-li {
-    color: #ABB2BF;
+.filter-input-label {
+    position: relative;
+    left: 13px;
+    /*display: block;
+    float: left;*/
 }
 
-p {
-    color: #ABB2BF;
+.filter-input-element {
+    position: relative;
+    left: 20px;
+    margin-bottom: 10px;
+    border-color: #f5f5f5;
+}
+
+#filter-min-price.filter-input {
+    position: relative;
+    width: 57px;
+    float: left;
+    margin-right: 10px;
+    /*margin-bottom: 10px;*/
+}
+
+#filter-max-price.filter-input {
+    position: relative;
+    width: 57px;
+}
+
+#filter-city.filter-input {
+    position: relative;
+    width: 150px;
+}
+
+.filter-fieldset {
+    width: 200%;
+    margin-right: 15px;
+    margin-left: 15px;
+    border-color: #f5f5f5;
+    border-width: .1px;
+}
+
+.action-button {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    background: black;
+    color: white;
+    width: 200px;
+    height: 42px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 130%;
+    border-radius: 5px;
+}
+
+/*=================== POSTS ===================*/
+
+#posts {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 800px;
+    top: 165px;
+    left: 250px;
+    justify-content: flex-start;
+    align-content: space-between;
+}
+.post{
+    height: 200px;
+    width: 250px;
+    border-width: 1px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #dadada;
+    margin: 0px 5px 10px 5px;
+    margin-bottom: 10px;
+}
+
+.post-contents {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.post-image-container {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.post-image-container img {
+    max-height: 130px;
+    max-width: 95%;
+}
+
+.post-info-container {
+    font-family: Roboto;
+    font-size: smaller;
+    margin: 0px 5px 0px 5px;
+}
+
+/*=================== POST TEXT ===================*/
+
+.post-title {
+    text-decoration: none;
+    color: #fa8f52;
+}
+
+.post-price {
+    background: #efefef;
+    margin-top: 2px;
+    border: 1px solid #ababab;
+    font-size: x-small;
+    border-radius: 5px;
+    padding: 2.5px
+}
+
+/*=================== BUTTONS ===================*/
+#sell-something-button {
+    position: fixed;
+    top: 580px;
+    left: 1000px;
+    background-color: #f67812;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 1px 1px 5px;
+}
+
+.fa-plus {
+    color: white;
+}
+
+#sell-something-button:hover {
+    transform: scale(1.1)
+}
+
+#filter-update-button:hover {
+    color: black;
+    background-color: #f3d0b5;
+}
+
+.post-title:hover {
+    text-decoration: underline;
 }
 
 
+/*=================== MEDIA ===================*/
+@media(max-width:1000px) {
+    #posts {
+        width: 600px;
+        }
+}
 
+@media(max-width:700px) {
+    #posts {
+        width: 400px;
+        }
+}
